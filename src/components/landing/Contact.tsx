@@ -52,7 +52,7 @@ const formSchema = z.object({
     message: "Please enter a valid phone number.",
   }),
   course: z.string({
-    required_error: "Please select a course.",
+    message: "Please select a course.",
   }),
   message: z.string().optional(),
 });
@@ -105,7 +105,7 @@ export default function Contact() {
               Ask whatever you have in your mind
             </h2>
             <p className="text-lg text-muted-foreground md:text-xl">
-              Whether you have questions or are ready to discuss your business, we're here to help. Reach out today.
+              Whether you have questions or are ready to discuss your business, we&apos;re here to help. Reach out today.
             </p>
             <div className="space-y-4">
               {contactDetails.map((detail, index) => (
