@@ -1,20 +1,41 @@
 import Link from "next/link";
 import Logo from "@/components/logo";
-import { Linkedin, Twitter, Instagram, Facebook, Dribbble } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Facebook, Dribbble, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const sectionsLinks = [
     { name: "Process", href: "#process" },
-    { name: "Services", href: "#services" },
     { name: "Benefits", href: "#benefits" },
-    { name: "Plans", href: "#plans" },
+    { name: "Career Paths", href: "#success-stories"},
+    { name: "Courses", href: "#computer-courses" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Refer & Earn", href: "#refer" },
     { name: "Contact", href: "#contact" },
 ];
 
-const pagesLinks = [
-    { name: "Home", href: "/" },
-    { name: "Coming soon", href: "#" },
-    { name: "404", href: "#" },
+const courseLinks = [
+    { name: "Full Stack Developer", href: "#success-stories" },
+    { name: "Java Developer", href: "#success-stories" },
+    { name: "Graphic Designer", href: "#success-stories" },
+    { name: "Cyber Security", href: "#success-stories" },
+    { name: "MS Office Training", href: "#computer-courses" },
+    { name: "Tally with GST", href: "#computer-courses" },
+    { name: "Advanced Excel", href: "#computer-courses"},
+    { name: "Basic Computer Course", href: "#computer-courses"},
+    { name: "D.Pharma", href: "#pricing" },
+    { name: "BCA", href: "#pricing" },
+    { name: "B.Com", href: "#pricing" },
+];
+
+const legalLinks = [
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
+]
+
+const contactInfo = [
+    { icon: <Mail className="h-4 w-4" />, text: "admin@careerpoint.com", href: "mailto:admin@careerpoint.com" },
+    { icon: <Phone className="h-4 w-4" />, text: "(969) 819-8061", href: "tel:(969) 819-8061" },
+    { icon: <MapPin className="h-4 w-4" />, text: "43 Roselle St. New York", href: "#" },
 ]
 
 export default function Footer() {
@@ -29,8 +50,23 @@ export default function Footer() {
               <span className="font-headline text-xl font-bold">Career Point</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Your trusted partner in AI solutions, creating smarter systems for smarter businesses.
+            Your trusted partner in IT training, creating smarter students for a smarter future.
             </p>
+            <ul className="mt-6 space-y-3">
+              {contactInfo.map((info) => (
+                <li key={info.text}>
+                  <Link
+                    href={info.href}
+                    className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <div className="flex items-center justify-center w-6 h-6 rounded-md bg-neutral-800/80 text-primary">
+                        {info.icon}
+                    </div>
+                    <span>{info.text}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <div className="mt-6 flex gap-2">
               <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
                 <Link href="#">
@@ -64,7 +100,7 @@ export default function Footer() {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 md:col-span-4 md:col-start-7 lg:col-start-9">
+          <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-3">
               <div>
                 <h3 className="font-headline text-sm font-semibold">Sections</h3>
                 <ul className="mt-4 space-y-2">
@@ -81,9 +117,24 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-headline text-sm font-semibold">Pages</h3>
+                <h3 className="font-headline text-sm font-semibold">Courses</h3>
                 <ul className="mt-4 space-y-2">
-                  {pagesLinks.map((link) => (
+                  {courseLinks.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-headline text-sm font-semibold">Legal</h3>
+                <ul className="mt-4 space-y-2">
+                  {legalLinks.map((link) => (
                     <li key={link.name}>
                       <Link
                         href={link.href}
@@ -98,7 +149,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-primary/10 pt-8 text-center text-sm text-muted-foreground">
-          <p>Visioned and Crafted by <Link href="#" className="font-medium text-foreground hover:text-primary">Aniket debnath</Link></p>
+          <p>Visioned and Crafted by <Link href="#" className="font-medium text-foreground hover:text-primary">Aniket Debnath</Link></p>
         </div>
       </div>
     </footer>

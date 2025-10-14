@@ -122,13 +122,13 @@ const TrendingCourses = () => {
                 top = 0;
                 scale = 1;
                 opacity = 1;
-                zIndex = 100;
+                zIndex = 45;
             } else {
                 const direction = position > 0 ? 1 : -1;
                 const absPosition = Math.abs(position);
 
-                const cardOffset = 45;
-                const totalOffset = 40;
+                const cardOffset = 30;
+                const totalOffset = 35;
                 
                 if (direction > 0) {
                     top = (absPosition * cardOffset) + totalOffset;
@@ -160,7 +160,7 @@ const TrendingCourses = () => {
             );
           })}
         </div>
-        <div className="flex justify-center gap-3 mt-12">
+        <div className="flex justify-center gap-3 mt-14 pt-16 sm:mt-0 sm:pt-0 md:pt-16">
             {successStories.map((_, index) => (
                 <Button
                     key={index}
