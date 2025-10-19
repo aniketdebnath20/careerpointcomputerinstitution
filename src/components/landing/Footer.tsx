@@ -92,12 +92,6 @@ export default function Footer() {
                   <span className="sr-only">Facebook</span>
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
-                <Link href="#">
-                  <Dribbble className="h-4 w-4" />
-                  <span className="sr-only">Dribbble</span>
-                </Link>
-              </Button>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-3">

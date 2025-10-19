@@ -1,14 +1,12 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const Logo = () => (
-    <div className="relative h-[60px] w-[170px]">
+    <div className="relative w-[63px] h-[47px]">
       <Image
-        src="/1.png"
+        src="/2.png"
         alt="Career Point Logo"
         layout="fill"
         objectFit="contain"
-        className="text-white"
       />
     </div>
   );

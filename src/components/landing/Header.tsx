@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
+import SLogo from "@/components/Slogo";
 import { Menu, X, ArrowRight, ArrowUpRight, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -57,7 +58,7 @@ export default function Header() {
         )}
       >
         <Link href="/" className="flex items-center gap-2" onClick={() => setActiveItem("Home")}>
-          <Logo className={cn("transition-all", isScrolled ? "h-6 w-6" : "h-8 w-8")} />
+          {isScrolled ? <SLogo /> : <Logo />}
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
@@ -84,12 +85,12 @@ export default function Header() {
           ) : (
             <Button asChild className="group/button transition-all duration-300 overflow-hidden rounded-full">
               <Link href="#contact" className="relative">
-                <span className="relative flex h-full w-full items-center justify-center">
+                <span className="relative flex h-full w-full items-center justify-center px-4 py-2">
                   <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">
-                    Get in touch <ArrowUpRight className="ml-2 h-4 w-4 inline" />
+                    Book a Call <ArrowUpRight className="ml-2 h-4 w-4 inline" />
                   </span>
                   <span className="absolute block translate-y-full opacity-0 transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:translate-y-0 group-hover/button:opacity-100">
-                    Get in touch <MoveRight className="ml-2 h-4 w-4 inline" />
+                    Book a Call <MoveRight className="ml-2 h-4 w-4 inline" />
                   </span>
                 </span>
               </Link>

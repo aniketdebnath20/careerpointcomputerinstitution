@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
-import Logo from "../logo";
+import SLogo from "../Slogo";
 
 export default function Cta() {
   return (
@@ -9,7 +9,7 @@ export default function Cta() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
             <Badge variant="outline" className="mb-4 bg-secondary/50 border-primary/20 py-1 px-3">
-              <Logo className="h-4 w-4 mr-2" />
+              <SLogo  />
               Career Point
             </Badge>
             <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
