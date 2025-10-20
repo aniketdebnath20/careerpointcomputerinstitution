@@ -1,47 +1,54 @@
 import Link from "next/link";
 import Logo from "@/components/logo";
-import { Linkedin, Twitter, Instagram, Facebook, Dribbble, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+
+const primaryEmail = "careerpointcomputerinstitution@gmail.com";
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(primaryEmail)}&su=${encodeURIComponent("New project inquiry")}&body=${encodeURIComponent("Hi, I'd like to discuss a project with you.")}`;
+
+
 const sectionsLinks = [
-    { name: "Process", href: "#process" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "Career Paths", href: "#success-stories"},
-    { name: "Courses", href: "#computer-courses" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Refer & Earn", href: "#refer" },
-    { name: "Contact", href: "#contact" },
+  { name: "Process", href: "#process" },
+  { name: "Benefits", href: "#benefits" },
+  { name: "Career Paths", href: "#success-stories" },
+  { name: "Courses", href: "#computer-courses" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Refer & Earn", href: "#refer" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const courseLinks = [
-    { name: "Full Stack Developer", href: "#success-stories" },
-    { name: "Java Developer", href: "#success-stories" },
-    { name: "Graphic Designer", href: "#success-stories" },
-    { name: "Cyber Security", href: "#success-stories" },
-    { name: "MS Office Training", href: "#computer-courses" },
-    { name: "Tally with GST", href: "#computer-courses" },
-    { name: "Advanced Excel", href: "#computer-courses"},
-    { name: "Basic Computer Course", href: "#computer-courses"},
-    { name: "D.Pharma", href: "#pricing" },
-    { name: "BCA", href: "#pricing" },
-    { name: "B.Com", href: "#pricing" },
+  { name: "Full Stack Developer", href: "#success-stories" },
+  { name: "Java Developer", href: "#success-stories" },
+  { name: "Graphic Designer", href: "#success-stories" },
+  { name: "Cyber Security", href: "#success-stories" },
+  { name: "MS Office Training", href: "#computer-courses" },
+  { name: "Tally with GST", href: "#computer-courses" },
+  { name: "Advanced Excel", href: "#computer-courses" },
+  { name: "Basic Computer Course", href: "#computer-courses" },
+  { name: "D.Pharma", href: "#pricing" },
+  { name: "BCA", href: "#pricing" },
+  { name: "B.Com", href: "#pricing" },
 ];
 
 const legalLinks = [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
+  { name: "Privacy Policy", href: "#" },
+  { name: "Terms of Service", href: "#" },
 ]
 
+
 const contactInfo = [
-    { icon: <Mail className="h-4 w-4" />, text: "admin@careerpoint.com", href: "mailto:admin@careerpoint.com" },
-    { icon: <Phone className="h-4 w-4" />, text: "(969) 819-8061", href: "tel:(969) 819-8061" },
-    { icon: <MapPin className="h-4 w-4" />, text: "43 Roselle St. New York", href: "#" },
+  { icon: <Mail className="h-4 w-4" />, text: "careerpointcomputerinstitution@gmail.com", href: gmailComposeUrl },
+  { icon: <Phone className="h-4 w-4" />, text: "7709226336", href: "tel:7709226336" },
+  { icon: <MapPin className="h-4 w-4" />, text: "Nallasopara (East). Mumbai", href: "#" },
 ]
+
 
 export default function Footer() {
   return (
     <footer className="relative w-full border-t border-primary/10 bg-background/50 pt-20 pb-8">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,hsl(var(--primary)/0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,hsl(var(--primary)/0.1),transparent_50%)]"></div>
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-12">
           <div className="md:col-span-4">
@@ -50,7 +57,7 @@ export default function Footer() {
               <span className="font-headline text-xl font-bold">Career Point</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Your trusted partner in IT training, creating smarter students for a smarter future.
+              Your trusted partner in IT training, creating smarter students for a smarter future.
             </p>
             <ul className="mt-6 space-y-3">
               {contactInfo.map((info) => (
@@ -60,7 +67,7 @@ export default function Footer() {
                     className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     <div className="flex items-center justify-center w-6 h-6 rounded-md bg-neutral-800/80 text-primary">
-                        {info.icon}
+                      {info.icon}
                     </div>
                     <span>{info.text}</span>
                   </Link>
@@ -86,7 +93,7 @@ export default function Footer() {
                   <span className="sr-only">Instagram</span>
                 </Link>
               </Button>
-               <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
+              <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
                 <Link href="#">
                   <Facebook className="h-4 w-4" />
                   <span className="sr-only">Facebook</span>
@@ -95,51 +102,53 @@ export default function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-3">
-              <div>
-                <h3 className="font-headline text-sm font-semibold">Sections</h3>
-                <ul className="mt-4 space-y-2">
-                  {sectionsLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-headline text-sm font-semibold">Courses</h3>
-                <ul className="mt-4 space-y-2">
-                  {courseLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-headline text-sm font-semibold">Legal</h3>
-                <ul className="mt-4 space-y-2">
-                  {legalLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div>
+              <h3 className="font-headline text-sm font-semibold">Sections</h3>
+              <ul className="mt-4 space-y-2">
+                {sectionsLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-headline text-sm font-semibold">Courses</h3>
+              <ul className="mt-4 space-y-2">
+                {courseLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-headline text-sm font-semibold">Legal</h3>
+              <ul className="mt-4 space-y-2">
+                {legalLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         <div className="mt-16 border-t border-primary/10 pt-8 text-center text-sm text-muted-foreground">

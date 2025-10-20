@@ -1,25 +1,31 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, TrendingDown, TrendingUp } from "lucide-react";
+import { Award, Briefcase, Check, LifeBuoy, TrendingDown, TrendingUp, Zap } from "lucide-react";
 
 const benefits = [
   {
-    icon: <TrendingDown className="h-6 w-6" />,
-    title: "Cost reduction",
+    icon: <Award className="h-6 w-6" />,
+    title: "Expert-Led Training",
     description:
-      "Optimize business processes and streamline operations to significantly minimize costs and maximize overall efficiency.",
+      "Learn from industry veterans and certified instructors who bring real-world experience and insights into the classroom.",
   },
   {
-    icon: <Check className="h-6 w-6" />,
-    title: "Improved outcomes",
+    icon: <Zap className="h-6 w-6" />,
+    title: "Hands-On Projects",
     description:
-      "Leverage powerful data-driven insights and innovative strategies to enhance business performance and achieve superior outcomes.",
+      "Build a professional portfolio by working on practical, real-world projects that showcase your skills to potential employers.",
   },
   {
-    icon: <TrendingUp className="h-6 w-6" />,
-    title: "Increased productivity",
+    icon: <Briefcase className="h-6 w-6" />,
+    title: "Job Placement Support",
     description:
-      "Enhance group performance and output by automating redundant tasks, refining processes, and speeding up business functions.",
+      "Receive dedicated career support, including resume building, interview preparation, and access to our network of hiring partners.",
+  },
+  {
+    icon: <LifeBuoy className="h-6 w-6" />,
+    title: "Lifetime Practice Card",
+    description:
+      "Get lifetime access to our practice card for continuous learning and skill reinforcement, long after you've completed your course.",
   },
 ];
 

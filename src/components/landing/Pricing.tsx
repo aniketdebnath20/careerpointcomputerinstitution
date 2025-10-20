@@ -7,8 +7,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "D.Pharma",
-    price: "Custom",
-    period: "/2 years",
+    period: "/ 2 years",
     description: "Diploma in Pharmacy for a career in healthcare.",
     features: [
       "Pharmaceutical Chemistry",
@@ -22,8 +21,7 @@ const plans = [
   },
   {
     name: "BCA",
-    price: "Custom",
-    period: "/3 years",
+    period: "/ 3 years",
     description: "Bachelor of Computer Applications for a solid IT foundation.",
     features: [
       "Data Structures & Algorithms",
@@ -37,17 +35,16 @@ const plans = [
     popular: true,
   },
   {
-    name: "B.Com",
-    price: "Custom",
-    period: "/3 years",
-    description: "Commerce degree with a focus on computer applications.",
+    name: "B.Sc",
+    period: "/ 3 years",
+    description: "Bachelor of Science with a focus on computer science and mathematics.",
     features: [
-        "Financial Accounting",
-        "Business Law",
-        "Computer Fundamentals & IT",
-        "E-commerce and Web Design",
-        "Tally & ERP Systems",
-        "Project Work",
+        "Advanced Mathematics",
+        "Physics & Electronics",
+        "Computer Science Fundamentals",
+        "Statistical Analysis",
+        "Laboratory Practicals",
+        "Research Project",
     ],
     cta: "Inquire Now",
     popular: false,
@@ -86,12 +83,10 @@ const Pricing = () => {
               )}
               
               <CardHeader className="text-center pb-8">
-                <CardTitle className="font-headline text-2xl mb-2">{plan.name}</CardTitle>
-                <div className="mb-2">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
-                </div>
-                <p className="text-sm text-muted-foreground">{plan.description}</p>
+                <CardTitle className="font-headline text-2xl mb-2 flex items-center justify-center">
+                  {plan.name} <span className="text-muted-foreground text-sm mt-2 ml-2">{plan.period}</span>
+                </CardTitle>
+                <p className="text-sm text-muted-foreground h-10">{plan.description}</p>
               </CardHeader>
 
               <CardContent className="flex flex-col flex-1">

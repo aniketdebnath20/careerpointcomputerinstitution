@@ -84,7 +84,10 @@ export default function Header() {
             </Button>
           ) : (
             <Button asChild className="group/button transition-all duration-300 overflow-hidden rounded-full">
-              <Link href="#contact" className="relative">
+              <Link
+                href="tel:+7709226336"
+                className="relative"
+              >
                 <span className="relative flex h-full w-full items-center justify-center px-4 py-2">
                   <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">
                     Book a Call <ArrowUpRight className="ml-2 h-4 w-4 inline" />

@@ -32,8 +32,8 @@ const courses = [
     description: "Get hands-on experience with the latest version of Tally for modern accounting.",
   },
   {
-    title: "Advanced Excel with GST",
-    description: "Unlock the full potential of Excel with advanced formulas, functions, and GST applications.",
+    title: "Advanced Excel",
+    description: "Unlock the full potential of Excel with advanced formulas, functions, and data analysis tools.",
   },
   {
     title: "Graphic Designer",

@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MoveRight } from "lucide-react";
+import { ArrowUpRight, MoveRight, MoveUp } from "lucide-react";
 import Link from "next/link";
 import Logo from "../Slogo";
 
@@ -23,26 +23,31 @@ export default function Hero() {
             <p className="mx-auto mt-6 max-w-[700px] text-lg text-muted-foreground md:text-xl">
               Experience the future of learning with comprehensive,Join Career Point Computer Academy to master the most in-demand computer skills with expert-led, hands-on courses designed for your career growth.
             </p>
-            <div className="mt-8 flex justify-center gap-4">
+            <div className="mt-8 flex justify-center items-center gap-4">
               <Button size="lg" asChild className="group/button bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                <Link href="#contact" className="relative">
-                    <span className="relative flex h-full w-full items-center justify-center">
-                        <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">
-                            Book a Call <MoveRight className="ml-2 h-4 w-4 inline" />
-                        </span>
-                        <span className="absolute block translate-y-full opacity-0 transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:translate-y-0 group-hover/button:opacity-100">
-                           Book a Call <MoveRight className="ml-2 h-4 w-4 inline" />
-                        </span>
+                <Link
+                  href="https://wa.me/7709226336"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative"
+                >
+                  <span className="relative flex h-full w-full items-center justify-center">
+                    <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">
+                      Chat with us <ArrowUpRight className="ml-2 h-4 w-4 inline" />
                     </span>
+                    <span className="absolute block translate-y-full opacity-0 transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:translate-y-0 group-hover/button:opacity-100">
+                      Chat with us  <MoveRight className="ml-2 h-4 w-4 inline" />
+                    </span>
+                  </span>
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="group/button relative overflow-hidden shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
-                 <Link href="#computer-courses">
-                    <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent translate-y-full group-hover/button:translate-y-0 transition-transform duration-300 ease-in-out"></span>
-                    <span className="relative flex h-full w-full items-center justify-center text-foreground transition-colors duration-300 ease-in-out group-hover/button:text-white">
-                         <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">See Courses</span>
-                         <span className="absolute block translate-y-full opacity-0 transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:translate-y-0 group-hover/button:opacity-100">See Courses</span>
-                    </span>
+              <Button size="md" variant="outline" asChild className="group/button relative overflow-hidden shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+                <Link href="#computer-courses">
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent translate-y-full group-hover/button:translate-y-0 transition-transform duration-300 ease-in-out"></span>
+                  <span className="relative flex h-full w-full items-center justify-center text-foreground transition-colors duration-300 ease-in-out group-hover/button:text-white">
+                    <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">See Courses</span>
+                    <span className="absolute block translate-y-full opacity-0 transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:translate-y-0 group-hover/button:opacity-100">See Courses</span>
+                  </span>
                 </Link>
               </Button>
             </div>
