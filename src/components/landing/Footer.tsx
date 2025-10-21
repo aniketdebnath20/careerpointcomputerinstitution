@@ -76,7 +76,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6 flex gap-2">
               <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
-                <Link href="#">
+                <Link href="https://www.linkedin.com/in/career-point-computer-education-75338238b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                   <Linkedin className="h-4 w-4" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
@@ -88,15 +88,9 @@ export default function Footer() {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
-                <Link href="#">
+                <Link href="c:\Users\Admin\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\64F99CDC917B39ADF9DA5C18BAAF67428620BAE9\transfers\2025-43\WhatsApp Image 2025-10-19 at 1.02.27 PM.jpeg">
                   <Instagram className="h-4 w-4" />
                   <span className="sr-only">Instagram</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8 rounded-md bg-neutral-800/80 hover:bg-neutral-800" asChild>
-                <Link href="#">
-                  <Facebook className="h-4 w-4" />
-                  <span className="sr-only">Facebook</span>
                 </Link>
               </Button>
             </div>
