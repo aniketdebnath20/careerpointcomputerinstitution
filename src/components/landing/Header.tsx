@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
-import SLogo from "@/components/Slogo";
+import Slogo from "@/components/Slogo";
 import { Menu, X, ArrowRight, ArrowUpRight, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -58,7 +58,7 @@ export default function Header() {
         )}
       >
         <Link href="/" className="flex items-center gap-2" onClick={() => setActiveItem("Home")}>
-          {isScrolled ? <SLogo /> : <Logo />}
+          {isScrolled ? <Slogo /> : <Logo />}
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
@@ -84,10 +84,7 @@ export default function Header() {
             </Button>
           ) : (
             <Button asChild className="group/button transition-all duration-300 overflow-hidden rounded-full">
-              <Link
-                href="tel:+7709226336"
-                className="relative"
-              >
+              <Link href="#contact" className="relative">
                 <span className="relative flex h-full w-full items-center justify-center px-4 py-2">
                   <span className="block transition-all duration-300 ease-[cubic-bezier(0.3,_,0.7,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">
                     Book a Call <ArrowUpRight className="ml-2 h-4 w-4 inline" />
@@ -108,16 +105,22 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs sm:max-w-sm bg-background">
+            <SheetContent side="right" className="w-full max-w-xs sm:max-w-sm bg-background p-0">
               <SheetTitle className="sr-only">Menu</SheetTitle>
               <SheetDescription className="sr-only">
                 Main navigation menu for mobile devices.
               </SheetDescription>
               <div className="flex h-full flex-col">
                 <div className="flex items-center justify-between border-b p-4">
-                  <Link href="/" className="flex items-center gap-2">
+                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <Logo />
                   </Link>
+                  {/* <SheetClose asChild>
+                     <Button variant="ghost" size="icon">
+                        <X className="h-6 w-6" />
+                        <span className="sr-only">Close menu</span>
+                    </Button>
+                  </SheetClose> */}
                 </div>
                 <nav className="flex flex-col gap-4 p-4">
                   {navItems.map((item) => (
@@ -133,7 +136,11 @@ export default function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4 border-t p-4">
-                  <Button size="lg">Get in touch <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  <Button asChild size="lg">
+                    <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                        Get in touch <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </SheetContent>

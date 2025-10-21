@@ -171,22 +171,45 @@ export default function Contact() {
               we&apos;re here to help. Reach out today.
             </p>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               {contactDetails.map((detail, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 border border-primary/20 text-primary">
+                <div
+                  key={index}
+                  className="flex items-start sm:items-center gap-4 flex-wrap sm:flex-nowrap"
+                >
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 border border-primary/20 text-primary flex-shrink-0">
                     {detail.icon}
                   </div>
                   <Link
                     href={detail.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-muted-foreground break-words max-w-full sm:max-w-[80%] leading-snug"
                   >
-                    <span className="text-muted-foreground">{detail.text}</span>
+                    {detail.text}
+                  </Link>
+                </div>
+              ))} */}
+            {/* </div> */}
+
+            <div className="space-y-4">
+              {contactDetails.map((detail, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 border border-primary/20 text-primary flex-shrink-0">
+                    {detail.icon}
+                  </div>
+                  <Link
+                    href={detail.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground break-words max-w-full sm:max-w-[80%] leading-snug"
+                  >
+                    <span className="text-muted-foreground break-all">{detail.text}</span>
                   </Link>
                 </div>
               ))}
             </div>
+
           </div>
 
           {/* Right Section - Form */}
